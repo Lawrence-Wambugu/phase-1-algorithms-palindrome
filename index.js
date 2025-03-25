@@ -4,8 +4,21 @@ function isPalindrome(word) {
 
 /* 
   Add your pseudocode here
+  
 */
-
+function isPalindrome(str) {
+  // Get the length of the string
+  const len = str.length;
+  
+  // Loop through half the string
+  for (let i = 0; i < Math.floor(len / 2); i++) {
+      // Compare character from start with character from end
+      if (str[i] !== str[len - 1 - i]) {
+          return false;
+      }
+  }
+  return true;
+}
 /*
   Add written explanation of your solution here
 */
